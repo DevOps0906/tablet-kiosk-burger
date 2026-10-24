@@ -234,7 +234,7 @@ flowchart LR
 `[서비스명]` · `[가게 이름]` · `[VAN사]` · `[발급 번호]` · `[고객센터 번호]` · `[문자 발송 서비스]` — 실제 값으로 바꿔서 쓰세요. 이미지 자리는 색 박스로 비워 두었습니다.
 
 ## 관련 저장소
-- [tablet-kiosk-restaurant](https://github.com/DevOps0906/tablet-kiosk-restaurant) — 식당 (갈비식당)
+- [goki-kiosk-restaurant](https://github.com/DevOps0906/goki-kiosk-restaurant) — 고깃집 · 식당 (카운터 키오스크 + 테이블오더)
 - [tablet-kiosk-cafe](https://github.com/DevOps0906/tablet-kiosk-cafe) — 카페 (스타벅스 벤치마킹)
 - [tablet-kiosk-burger](https://github.com/DevOps0906/tablet-kiosk-burger) — 버거 (버거킹 벤치마킹)
 
