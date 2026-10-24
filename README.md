@@ -23,11 +23,37 @@
 | [specs/coupon.md](specs/coupon.md) | 쿠폰 발행 · 사용 명세 |
 | [tasks/README.md](tasks/README.md) | 관련 core 작업 · 완료 체크리스트 |
 
-```bash
-# Claude Code에서 함께 열기
-cd kiosk/tablet-kiosk-core
-claude --add-dir ../tablet-kiosk-burger
-```
+### PC에서 개발 시작하기
+
+1. **폴더 하나에 core 와 이 저장소를 나란히 클론**합니다. 이 저장소를 core **안에** 클론하지 않습니다 (저장소 안의 저장소 → git 꼬임).
+
+   ```
+   kiosk/
+   ├── tablet-kiosk-core/          ← 실제 코드 · 멀티에이전트 팀 (여기서 Claude Code 실행)
+   └── tablet-kiosk-burger/    ← 이 저장소 (버거 설계서)
+   ```
+
+   ```bash
+   mkdir kiosk && cd kiosk
+   git clone https://github.com/DevOps0906/tablet-kiosk-core
+   git clone https://github.com/DevOps0906/tablet-kiosk-burger
+   ```
+
+2. **VS Code로 `kiosk/` 폴더를 엽니다.** (Android Studio는 SDK · 에뮬레이터용으로 설치만)
+3. **VS Code 터미널에서 core 를 기준으로 Claude Code 를 실행**하고 이 저장소를 함께 엽니다.
+
+   ```bash
+   cd tablet-kiosk-core
+   claude --add-dir ../tablet-kiosk-burger
+   ```
+
+4. Claude Code 안에서 처음 한 번 `/agent-check`로 팀을 확인하고, `/next-task`로 진행합니다.
+
+| 항목 | 내용 |
+|---|---|
+| 앱 구조 | Flutter 키오스크 앱(`apps/kiosk`) + Next.js 사장님 대시보드(`apps/admin`) + Supabase — 모두 core 에 있음 |
+| 멀티에이전트 | core 의 `.claude/agents/`에 한 번만 들어 있음 (팀장 Opus · 고문 Fable · 대리 Sonnet · 사원 Haiku · 분야 3 · 검증 5). 이 저장소에는 넣지 않음 — [core docs/11](https://github.com/DevOps0906/tablet-kiosk-core/blob/master/docs/11-multi-agent.md) |
+| 버거 작업 시점 | task-024 (Phase 6) — 공통 기반 · 결제 · 쿠폰(001–022)이 먼저 끝나야 합니다 |
 
 ## 미리보기
 

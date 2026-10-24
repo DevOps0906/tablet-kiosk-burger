@@ -10,6 +10,9 @@
 
 ## 2. 함께 여는 방법
 
+- 이 저장소는 core **옆에** 클론합니다 (core 안에 클론하지 않음).
+- 멀티에이전트 팀(`.claude/agents/`)은 core 에만 있습니다. 이 저장소에 에이전트 · 스킬을 만들지 않습니다.
+
 ```bash
 cd kiosk/tablet-kiosk-core
 claude --add-dir ../tablet-kiosk-burger
