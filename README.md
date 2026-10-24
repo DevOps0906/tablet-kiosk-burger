@@ -7,6 +7,28 @@
 - 두 방식 모두 **같은 서버 · 같은 관리자 화면 · 같은 주문 데이터**를 쓰고 매장 기기만 다릅니다.
 - 총 31개 화면 · 스탠드형과 갤럭시탭 손님 화면은 각 8장으로 같은 수
 
+## 개발 지침
+
+이 저장소는 **설계서**입니다. 실제 코드는 [tablet-kiosk-core](https://github.com/DevOps0906/tablet-kiosk-core)의 `apps/kiosk/lib/verticals/burger/`에 작성합니다. (앱은 하나, 업종은 모듈)
+
+| 문서 | 내용 |
+|---|---|
+| [CLAUDE.md](CLAUDE.md) | Claude Code 작업 규칙 — 설계서 사용법, 문서 우선순위 |
+| [PRD.md](PRD.md) | 버거 범위 · 예시 주문 · 성공 지표 |
+| [DESIGN.md](DESIGN.md) | 버거 테마 토큰 · 화면 목록 · 전용 컴포넌트 · 디자인과 명세 차이 |
+| [docs/01-vertical-rules.md](docs/01-vertical-rules.md) | 버거 업무 규칙 · 확장 지점 구현 · 데이터 키 |
+| [docs/02-menu-seed.md](docs/02-menu-seed.md) | 예시 메뉴 · 옵션 · 쿠폰 (시드 데이터 기준) |
+| [specs/customer-flow.md](specs/customer-flow.md) | 손님 화면 명세 · 수용 시나리오 |
+| [specs/owner-setup.md](specs/owner-setup.md) | 사장님 세팅 5단계 명세 |
+| [specs/coupon.md](specs/coupon.md) | 쿠폰 발행 · 사용 명세 |
+| [tasks/README.md](tasks/README.md) | 관련 core 작업 · 완료 체크리스트 |
+
+```bash
+# Claude Code에서 함께 열기
+cd kiosk/tablet-kiosk-core
+claude --add-dir ../tablet-kiosk-burger
+```
+
 ## 미리보기
 
 | 스탠드형 시작 | 스탠드형 메뉴 | 결제 방법 · 쿠폰 | 쿠폰 시리얼 입력 |
