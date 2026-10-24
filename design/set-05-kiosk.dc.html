@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 세팅 5 키오스크 모드 주문번호</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:1280px;height:800px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;overflow:hidden">
+
+<div style="width:300px;flex:none;box-sizing:border-box;background:#2A1A12;color:#FFFFFF;padding:36px 24px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:1px;color:#F59E0B">[서비스명]</span><span style="font-size:16px;color:#F0DCC8">사장님 키오스크 설정</span></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="5">
+<div style="height:56px;box-sizing:border-box;padding:0 14px;border-radius:14px;background:{{s.bg}};display:flex;align-items:center;gap:12px">
+<span style="width:32px;height:32px;flex:none;box-sizing:border-box;border-radius:16px;background:{{s.dot}};border:{{s.ring}};color:{{s.dotInk}};font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">{{s.mark}}</span>
+<span style="font-size:18px;font-weight:{{s.weight}};color:{{s.ink}}">{{s.label}}</span>
+</div>
+</sc-for>
+</div>
+<div style="margin-top:auto;box-sizing:border-box;border-radius:14px;background:#3E2A20;padding:16px;font-size:15px;line-height:24px;color:#F0DCC8">막히면 원격으로 도와드려요<br><b style="color:#FFFFFF">[고객센터 번호]</b></div>
+</div>
+
+<div style="flex:1;box-sizing:border-box;padding:44px 56px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:17px;font-weight:700;color:#B42318">5 / 5 · 마지막</span>
+<span style="font-size:32px;font-weight:900;line-height:42px">키오스크 모드 · 주문번호 안내</span>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+
+<div style="grid-column:span 2;box-sizing:border-box;background:#FFFFFF;border:2px solid #B42318;border-radius:18px;padding:18px 20px;display:flex;gap:20px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:20px;font-weight:900">버거 전용 · 주문번호 안내 화면</span>
+<span style="font-size:16px;line-height:24px;color:#7A5A48">가게 TV나 남는 모니터에서 아래 주소를 열면 조리 중 · 완료 번호가 표시돼요</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="height:40px;padding:0 14px;border-radius:12px;background:#FFF8F0;font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;display:flex;align-items:center">[서비스 주소]/board/BR5G</span><span style="height:40px;padding:0 14px;border-radius:12px;background:#FDECEA;color:#8F1D14;font-size:16px;font-weight:700;display:flex;align-items:center">주문번호 매일 001부터</span></div>
+</div>
+<div style="width:120px;height:120px;flex:none;box-sizing:border-box;border-radius:14px;border:2px solid #2A1A12;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700">TV 연결 QR</div>
+</div>
+
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:19px;font-weight:700">화면 방향</span>
+<div style="display:flex;gap:8px"><button aria-pressed="true" style="flex:1;height:50px;border:0;border-radius:12px;background:#B42318;color:#FFFFFF;font-family:inherit;font-size:17px;font-weight:700">가로 · 추천</button><button style="flex:1;height:50px;border:2px solid #F0DCC8;border-radius:12px;background:#FFFFFF;font-family:inherit;font-size:17px;color:#2A1A12">세로</button></div>
+<span style="font-size:14px;color:#7A5A48">갤럭시탭 A9+ · S9 가로 1280×800</span>
+</div>
+
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:19px;font-weight:700">결제 · 권유</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="height:40px;padding:0 12px;border-radius:12px;background:#FDECEA;color:#8F1D14;font-size:16px;font-weight:700;display:flex;align-items:center">✓ 전체결제</span><span style="height:40px;padding:0 12px;border-radius:12px;background:#E8EFFE;color:#0B2F85;font-size:16px;font-weight:700;display:flex;align-items:center">✓ 더치페이</span><span style="height:40px;padding:0 12px;border-radius:12px;background:#FEF3D7;color:#7A4A00;font-size:16px;font-weight:700;display:flex;align-items:center">세트 · 라지 권유</span></div>
+</div>
+
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:19px;font-weight:700">화면 잠금 · 복귀</span>
+<div style="display:flex;gap:8px"><span style="height:40px;padding:0 14px;border-radius:12px;background:#FDECEA;color:#8F1D14;font-size:16px;font-weight:700;display:flex;align-items:center">앱 고정 켜짐</span><span style="height:40px;padding:0 14px;border-radius:12px;background:#FFF8F0;font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;display:flex;align-items:center">20초 뒤 처음</span></div>
+</div>
+
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:19px;font-weight:700">사장님 PIN</span>
+<div style="display:flex;gap:8px"><span style="width:44px;height:44px;border-radius:12px;background:#2A1A12"></span><span style="width:44px;height:44px;border-radius:12px;background:#2A1A12"></span><span style="width:44px;height:44px;border-radius:12px;background:#2A1A12"></span><span style="width:44px;height:44px;border-radius:12px;background:#2A1A12"></span></div>
+</div>
+
+</div>
+
+<div style="margin-top:auto;display:flex;justify-content:flex-end;gap:14px">
+<a href="set-04-devices.dc.html" style="height:68px;box-sizing:border-box;padding:0 28px;border:2px solid #F0DCC8;border-radius:16px;background:#FFFFFF;color:#2A1A12;font-size:20px;font-weight:700;text-decoration:none;display:flex;align-items:center">‹ 이전</a>
+<a href="sw-00-start.dc.html" style="height:68px;box-sizing:border-box;padding:0 44px;border-radius:16px;background:#B42318;color:#FFFFFF;font-size:22px;font-weight:700;text-decoration:none;display:flex;align-items:center">키오스크 시작하기 ›</a>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const cur = 5;
+    const labels = ['사장님 시작', '매장 정보', '메뉴 등록', '기기 연결', '키오스크 모드'];
+    return {
+      steps: labels.map((label, i) => {
+        const n = i + 1, done = n < cur, now = n === cur;
+        return {
+          label, mark: done ? '✓' : String(n),
+          bg: now ? '#B42318' : 'transparent',
+          dot: done ? '#F59E0B' : now ? '#FFFFFF' : 'transparent',
+          ring: done || now ? '0' : '2px solid #7A5A48',
+          dotInk: done ? '#2A1A12' : now ? '#B42318' : '#B9A28F',
+          ink: done || now ? '#FFFFFF' : '#B9A28F',
+          weight: now ? '700' : '400'
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>스탠드형 쿠폰 시리얼 입력</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:800px;height:1280px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="height:96px;flex:none;box-sizing:border-box;padding:0 32px;background:#FFFFFF;border-bottom:1px solid #F0DCC8;display:flex;align-items:center;gap:20px">
+<a href="05-pay-method.dc.html" style="height:56px;box-sizing:border-box;padding:0 22px;border:1px solid #F0DCC8;border-radius:28px;font-size:20px;color:#2A1A12;text-decoration:none;display:flex;align-items:center">‹ 결제로</a>
+<span style="font-size:34px;font-weight:900">쿠폰 사용</span>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:24px 32px 0">
+<div role="tablist" aria-label="쿠폰 입력 방법" style="height:68px;box-sizing:border-box;padding:4px;border-radius:18px;background:#F6E8DA;display:flex;gap:4px">
+<button role="tab" aria-selected="true" style="flex:1;border:0;border-radius:14px;background:#B42318;color:#FFFFFF;font-family:inherit;font-size:21px;font-weight:700">시리얼 번호 입력</button>
+<a role="tab" aria-selected="false" href="hw-coupon-scan.dc.html" style="flex:1;border-radius:14px;color:#7A5A48;font-size:21px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center">바코드 · QR 스캔</a>
+</div>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:24px 32px 0;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:20px;font-weight:700">쿠폰에 적힌 12자리를 입력해 주세요</span>
+<div style="display:flex;align-items:center;gap:12px" aria-label="입력한 시리얼 번호">
+<span style="flex:1;height:84px;box-sizing:border-box;border:3px solid #B42318;border-radius:16px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;letter-spacing:4px;display:flex;align-items:center;justify-content:center">BR24</span>
+<span style="font-size:30px;color:#B9A28F">-</span>
+<span style="flex:1;height:84px;box-sizing:border-box;border:3px solid #B42318;border-radius:16px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;letter-spacing:4px;display:flex;align-items:center;justify-content:center">9XTN</span>
+<span style="font-size:30px;color:#B9A28F">-</span>
+<span style="flex:1;height:84px;box-sizing:border-box;border:3px solid #B42318;border-radius:16px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;letter-spacing:4px;display:flex;align-items:center;justify-content:center">4KCH</span>
+</div>
+<span style="font-size:16px;color:#7A5A48">헷갈리는 글자 0 · O · 1 · I는 쓰지 않아요</span>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:18px 32px 0">
+<div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px">
+<sc-for list="{{keys}}" as="k" hint-placeholder-count="32">
+<button style="height:64px;border:1px solid #F0DCC8;border-radius:12px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:#2A1A12">{{k}}</button>
+</sc-for>
+</div>
+<div style="display:flex;gap:8px;margin-top:8px">
+<button style="flex:1;height:60px;border:1px solid #F0DCC8;border-radius:12px;background:#F6E8DA;font-family:inherit;font-size:19px;font-weight:700;color:#2A1A12">전체 지움</button>
+<button aria-label="한 글자 지움" style="flex:1;height:60px;border:1px solid #F0DCC8;border-radius:12px;background:#F6E8DA;font-family:inherit;font-size:24px;font-weight:700;color:#2A1A12">⌫</button>
+</div>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:20px 32px 0">
+<div style="box-sizing:border-box;border-radius:20px;background:#FFFFFF;border:2px solid #B42318;padding:20px 22px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:36px;height:36px;border-radius:18px;background:#B42318;color:#FFFFFF;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span><span style="font-size:21px;font-weight:900">세트 1,500원 할인</span></div>
+<span style="font-size:16px;color:#7A5A48">세트 메뉴 포함 주문 · 11월 30일까지 · 1회 사용</span>
+<div style="height:1px;background:#F6E8DA"></div>
+<div style="display:flex;justify-content:space-between;font-size:19px"><span style="color:#7A5A48">주문 금액</span><span style="font-family:'JetBrains Mono',monospace">22,800원</span></div>
+<div style="display:flex;justify-content:space-between;font-size:19px"><span style="color:#7A5A48">쿠폰 할인</span><span style="font-family:'JetBrains Mono',monospace;color:#B42318">-1,500원</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:22px;font-weight:700">결제할 금액</span><span style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:#B42318">21,300원</span></div>
+</div>
+</div>
+
+<div style="flex:1"></div>
+
+<div style="height:128px;flex:none;box-sizing:border-box;padding:20px 32px;display:flex;gap:16px">
+<a href="05-pay-method.dc.html" style="flex:1;height:88px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:20px;background:#FFFFFF;color:#2A1A12;font-size:24px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center">취소</a>
+<a href="05-pay-method.dc.html" style="flex:2;height:88px;box-sizing:border-box;border-radius:20px;background:#B42318;color:#FFFFFF;font-size:24px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center">쿠폰 적용하고 결제 방법 선택</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":1280}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { keys: 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'.split('') };
+  }
+}
+</script>
+</body>
+</html>

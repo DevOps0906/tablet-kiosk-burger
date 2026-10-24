@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 메뉴 선택</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:800px;height:1280px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="height:96px;flex:none;box-sizing:border-box;padding:0 28px;background:#2A1A12;display:flex;align-items:center;justify-content:space-between;gap:16px">
+<span style="font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:1px;color:#FFF8F0">[버거 매장명]</span>
+<div role="tablist" aria-label="매장 또는 포장" style="width:280px;height:60px;box-sizing:border-box;padding:4px;border-radius:30px;background:#4A3428;display:flex;gap:4px">
+<button role="tab" aria-selected="{{dineSel}}" style="flex:1;border:0;border-radius:26px;background:{{dineBg}};color:{{dineInk}};font-family:inherit;font-size:21px;font-weight:700">매장</button>
+<button role="tab" aria-selected="{{takeSel}}" style="flex:1;border:0;border-radius:26px;background:{{takeBg}};color:{{takeInk}};font-family:inherit;font-size:21px;font-weight:700">포장</button>
+</div>
+</div>
+
+<div style="flex:none;height:150px;box-sizing:border-box;background:#B42318;padding:0 28px;display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:18px;font-weight:700;color:#FDE7B0">이번 주 추천</span>
+<span style="font-size:32px;font-weight:900;line-height:40px;color:#FFFFFF">더블 불고기 라지세트</span>
+</div>
+<span style="font-size:18px;color:#FDE7B0">[프로모션 이미지 영역]</span>
+</div>
+
+<div style="flex:1;min-height:0;display:flex">
+
+<div style="width:168px;flex:none;box-sizing:border-box;background:#FFFFFF;border-right:1px solid #F0DCC8;padding:16px 12px;display:flex;flex-direction:column;gap:8px">
+<button style="height:72px;border:0;border-radius:16px;background:#B42318;color:#FFFFFF;font-family:inherit;font-size:20px;font-weight:700">추천</button>
+<button style="height:72px;border:0;border-radius:16px;background:transparent;color:#2A1A12;font-family:inherit;font-size:20px;font-weight:500">버거</button>
+<button style="height:72px;border:0;border-radius:16px;background:transparent;color:#2A1A12;font-family:inherit;font-size:20px;font-weight:500">세트</button>
+<button style="height:72px;border:0;border-radius:16px;background:transparent;color:#2A1A12;font-family:inherit;font-size:20px;font-weight:500">사이드</button>
+<button style="height:72px;border:0;border-radius:16px;background:transparent;color:#2A1A12;font-family:inherit;font-size:20px;font-weight:500">음료</button>
+<button style="height:72px;border:0;border-radius:16px;background:transparent;color:#2A1A12;font-family:inherit;font-size:20px;font-weight:500">디저트</button>
+</div>
+
+<div style="flex:1;min-width:0;box-sizing:border-box;padding:20px 20px 20px;overflow:hidden">
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
+<sc-for list="{{items}}" as="item" hint-placeholder-count="9">
+<div style="position:relative;box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;overflow:hidden">
+<div style="height:140px;background:{{item.tint}};display:flex;align-items:center;justify-content:center;font-size:15px;color:#7A5A48">사진</div>
+<sc-if value="{{item.hasBadge}}" hint-placeholder-val="{{false}}">
+<div style="position:absolute;left:10px;top:10px;height:30px;padding:0 10px;border-radius:15px;background:#F59E0B;color:#412402;font-size:15px;font-weight:900;display:flex;align-items:center">{{item.badge}}</div>
+</sc-if>
+<sc-if value="{{item.hasQty}}" hint-placeholder-val="{{false}}">
+<div style="position:absolute;right:10px;top:10px;width:38px;height:38px;border-radius:19px;background:#B42318;color:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;display:flex;align-items:center;justify-content:center">{{item.qty}}</div>
+</sc-if>
+<div style="padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:19px;font-weight:700;line-height:26px">{{item.name}}</div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:21px;font-weight:700">{{item.price}}원~</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+</div>
+
+<div style="height:150px;flex:none;box-sizing:border-box;padding:0 28px;background:#FFFFFF;border-top:1px solid #F0DCC8;display:flex;align-items:center;justify-content:space-between;gap:24px">
+<div style="display:flex;flex-direction:column;gap:2px">
+<span style="font-size:20px;color:#7A5A48">담은 메뉴 3개</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:40px;font-weight:700;line-height:52px">22,800원</span>
+</div>
+<button style="width:300px;height:88px;border:0;border-radius:20px;background:#B42318;color:#FFFFFF;font-family:inherit;font-size:26px;font-weight:700">주문 확인 ›</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"orderType":{"editor":"enum","options":["매장","포장"],"default":"매장"},"$preview":{"width":800,"height":1280}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const dine = (this.props.orderType ?? '매장') === '매장';
+    const base = [
+      { name: '더블 불고기버거', price: '6,900', tint: '#F3D9C2', badge: 'BEST', qty: 1 },
+      { name: '치즈버거', price: '5,200', tint: '#FBE7C2' },
+      { name: '치킨버거', price: '5,500', tint: '#F6E2CF', qty: 1 },
+      { name: '새우버거', price: '5,800', tint: '#FADCD2', badge: 'NEW' },
+      { name: '베이컨 더블버거', price: '7,900', tint: '#EFD2C0' },
+      { name: '매운 치킨버거', price: '5,900', tint: '#F8D4C8' },
+      { name: '감자튀김', price: '2,300', tint: '#FBEBC4' },
+      { name: '너겟 6조각', price: '3,000', tint: '#F6E2CF', qty: 1 },
+      { name: '소프트 아이스크림', price: '1,500', tint: '#F4EEE8' }
+    ];
+    return {
+      dineSel: dine, takeSel: !dine,
+      dineBg: dine ? '#F59E0B' : 'transparent', dineInk: dine ? '#2A1A12' : '#F0DCC8',
+      takeBg: dine ? 'transparent' : '#F59E0B', takeInk: dine ? '#F0DCC8' : '#2A1A12',
+      items: base.map((b) => ({ ...b, hasQty: !!b.qty, hasBadge: !!b.badge }))
+    };
+  }
+}
+</script>
+</body>
+</html>

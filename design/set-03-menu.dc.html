@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 세팅 3 메뉴 세트 등록</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:1280px;height:800px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;overflow:hidden">
+
+<div style="width:300px;flex:none;box-sizing:border-box;background:#2A1A12;color:#FFFFFF;padding:36px 24px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:1px;color:#F59E0B">[서비스명]</span><span style="font-size:16px;color:#F0DCC8">사장님 키오스크 설정</span></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="5">
+<div style="height:56px;box-sizing:border-box;padding:0 14px;border-radius:14px;background:{{s.bg}};display:flex;align-items:center;gap:12px">
+<span style="width:32px;height:32px;flex:none;box-sizing:border-box;border-radius:16px;background:{{s.dot}};border:{{s.ring}};color:{{s.dotInk}};font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">{{s.mark}}</span>
+<span style="font-size:18px;font-weight:{{s.weight}};color:{{s.ink}}">{{s.label}}</span>
+</div>
+</sc-for>
+</div>
+<div style="margin-top:auto;box-sizing:border-box;border-radius:14px;background:#3E2A20;padding:16px;font-size:15px;line-height:24px;color:#F0DCC8">막히면 원격으로 도와드려요<br><b style="color:#FFFFFF">[고객센터 번호]</b></div>
+</div>
+
+<div style="flex:1;box-sizing:border-box;padding:44px 56px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:flex-end;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:17px;font-weight:700;color:#B42318">3 / 5</span>
+<span style="font-size:32px;font-weight:900;line-height:42px">메뉴 · 세트 등록</span>
+</div>
+<button style="height:56px;padding:0 22px;border:0;border-radius:14px;background:#2A1A12;color:#FFFFFF;font-family:inherit;font-size:18px;font-weight:700">메뉴판 사진으로 한 번에 등록</button>
+</div>
+
+<div style="flex:1;min-height:0;display:flex;gap:24px">
+
+<div style="width:380px;flex:none;box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<span style="height:38px;padding:0 14px;border-radius:19px;background:#2A1A12;color:#FFFFFF;font-size:16px;font-weight:700;display:flex;align-items:center">버거 6</span>
+<span style="height:38px;padding:0 14px;border-radius:19px;border:1px solid #F0DCC8;box-sizing:border-box;font-size:16px;display:flex;align-items:center">사이드 4</span>
+<span style="height:38px;padding:0 14px;border-radius:19px;border:1px solid #F0DCC8;box-sizing:border-box;font-size:16px;display:flex;align-items:center">음료 4</span>
+<span style="height:38px;padding:0 14px;border-radius:19px;border:1px solid #F0DCC8;box-sizing:border-box;font-size:16px;display:flex;align-items:center">+ 분류</span>
+</div>
+<sc-for list="{{menus}}" as="m" hint-placeholder-count="4">
+<div style="height:72px;box-sizing:border-box;border-radius:14px;border:{{m.border}};background:{{m.bg}};padding:0 14px;display:flex;align-items:center;gap:12px">
+<span style="width:48px;height:48px;flex:none;border-radius:10px;background:{{m.tint}}"></span>
+<div style="flex:1;display:flex;flex-direction:column"><span style="font-size:18px;font-weight:700">{{m.name}}</span><span style="font-size:14px;color:#7A5A48">{{m.unit}}</span></div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:700">{{m.price}}</span>
+</div>
+</sc-for>
+<button style="height:52px;border:2px dashed #B9A28F;border-radius:14px;background:#FFFFFF;font-family:inherit;font-size:17px;font-weight:700;color:#3A2418">+ 메뉴 추가</button>
+</div>
+
+<div style="flex:1;min-width:0;box-sizing:border-box;background:#FFFFFF;border:2px solid #B42318;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;gap:16px;align-items:center">
+<div style="width:96px;height:96px;flex:none;box-sizing:border-box;border-radius:14px;background:#F3D9C2;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px"><span style="height:28px;padding:0 10px;border-radius:14px;background:#2A1A12;color:#FFFFFF;font-size:13px;font-weight:700;display:flex;align-items:center">사진 찍기</span></div>
+<label style="flex:1;display:flex;flex-direction:column;gap:4px;font-size:15px;font-weight:700;color:#7A5A48">메뉴 이름<input readonly value="더블 불고기버거" style="height:48px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:12px;padding:0 12px;font-family:inherit;font-size:19px;color:#2A1A12"></label>
+</div>
+<div style="display:flex;gap:10px">
+<div style="flex:1;box-sizing:border-box;border-radius:12px;background:#FFF8F0;padding:10px 12px;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#7A5A48">단품</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700">6,900</span></div>
+<div style="flex:1;box-sizing:border-box;border-radius:12px;background:#FDECEA;padding:10px 12px;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#8F1D14">세트 (+2,700)</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700">9,600</span></div>
+<div style="flex:1;box-sizing:border-box;border-radius:12px;background:#FDECEA;padding:10px 12px;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#8F1D14">라지 (+700)</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700">10,300</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:700">재료 빼기 (무료)</span><div style="display:flex;flex-wrap:wrap;gap:8px"><span style="height:38px;padding:0 12px;border-radius:10px;background:#FFF8F0;font-size:15px;font-weight:700;display:flex;align-items:center">양파</span><span style="height:38px;padding:0 12px;border-radius:10px;background:#FFF8F0;font-size:15px;font-weight:700;display:flex;align-items:center">피클</span><span style="height:38px;padding:0 12px;border-radius:10px;background:#FFF8F0;font-size:15px;font-weight:700;display:flex;align-items:center">양상추</span><span style="height:38px;padding:0 12px;border-radius:10px;background:#FFF8F0;font-size:15px;font-weight:700;display:flex;align-items:center">소스</span></div></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:700">재료 추가 (유료)</span><div style="display:flex;flex-wrap:wrap;gap:8px"><span style="height:38px;padding:0 12px;border-radius:10px;background:#FDECEA;color:#8F1D14;font-size:15px;font-weight:700;display:flex;align-items:center">치즈 +600</span><span style="height:38px;padding:0 12px;border-radius:10px;background:#FDECEA;color:#8F1D14;font-size:15px;font-weight:700;display:flex;align-items:center">패티 +2,000</span><span style="height:38px;padding:0 12px;border-radius:10px;background:#FDECEA;color:#8F1D14;font-size:15px;font-weight:700;display:flex;align-items:center">베이컨 +1,000</span></div></div>
+<div style="margin-top:auto;display:flex;align-items:center;gap:10px"><span style="height:44px;padding:0 16px;border-radius:12px;background:#FFF8F0;font-size:16px;display:flex;align-items:center">사이드 · 음료는 세트 공통</span><span style="flex:1"></span><button style="height:44px;padding:0 20px;border:0;border-radius:12px;background:#B42318;color:#FFFFFF;font-family:inherit;font-size:17px;font-weight:700">저장</button></div>
+</div>
+
+</div>
+
+<div style="display:flex;justify-content:flex-end;gap:14px">
+<a href="set-02-store.dc.html" style="height:60px;box-sizing:border-box;padding:0 28px;border:2px solid #F0DCC8;border-radius:16px;background:#FFFFFF;color:#2A1A12;font-size:20px;font-weight:700;text-decoration:none;display:flex;align-items:center">‹ 이전</a>
+<a href="set-04-devices.dc.html" style="height:60px;box-sizing:border-box;padding:0 36px;border-radius:16px;background:#B42318;color:#FFFFFF;font-size:20px;font-weight:700;text-decoration:none;display:flex;align-items:center">다음 · 기기 연결 ›</a>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const cur = 3;
+    const labels = ['사장님 시작', '매장 정보', '메뉴 등록', '기기 연결', '키오스크 모드'];
+    const src = [
+      { name: '더블 불고기버거', unit: '단품 · 세트 · 라지', price: '6,900', tint: '#F3D9C2', on: true },
+      { name: '치즈버거', unit: '단품 · 세트 · 라지', price: '5,200', tint: '#FBE7C2' },
+      { name: '치킨버거', unit: '단품 · 세트 · 라지', price: '5,500', tint: '#F6E2CF' },
+      { name: '새우버거', unit: '단품 · 세트 · 라지', price: '5,800', tint: '#FADCD2' }
+    ];
+    return {
+      menus: src.map((m) => ({ ...m, border: m.on ? '2px solid #B42318' : '1px solid #F6E8DA', bg: m.on ? '#FDECEA' : '#FFFFFF' })),
+      steps: labels.map((label, i) => {
+        const n = i + 1, done = n < cur, now = n === cur;
+        return {
+          label, mark: done ? '✓' : String(n),
+          bg: now ? '#B42318' : 'transparent',
+          dot: done ? '#F59E0B' : now ? '#FFFFFF' : 'transparent',
+          ring: done || now ? '0' : '2px solid #7A5A48',
+          dotInk: done ? '#2A1A12' : now ? '#B42318' : '#B9A28F',
+          ink: done || now ? '#FFFFFF' : '#B9A28F',
+          weight: now ? '700' : '400'
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

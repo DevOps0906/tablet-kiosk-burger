@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 시스템 구조도</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="position:relative;width:1240px;height:840px;background:#FFFFFF;color:#2A1A12;font-family:'Noto Sans KR',sans-serif">
+<svg width="8" height="72" viewBox="0 0 8 72" preserveAspectRatio="none" style="position:absolute;left:616px;top:256px;width:8px;height:72px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M 4 0 L 4 72"></path></svg>
+<svg width="740" height="8" viewBox="0 0 740 8" preserveAspectRatio="none" style="position:absolute;left:250px;top:324px;width:740px;height:8px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M 0 4 L 740 4"></path></svg>
+<svg width="8" height="71" viewBox="0 0 8 71" preserveAspectRatio="none" style="position:absolute;left:246px;top:328px;width:8px;height:71px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><defs><marker id="dc-arrow-head-filled-1" orient="auto" markerWidth="5" markerHeight="5" refX="2" refY="2" overflow="visible"><path d="M0 0 L4 2 L0 4 Z" fill="#7A5A48" stroke="none" style="stroke: none; fill: #7A5A48; fill: context-stroke"/></marker></defs><path d="M 4 0 L 4 67" marker-end="url(#dc-arrow-head-filled-1)"></path></svg>
+<svg width="8" height="71" viewBox="0 0 8 71" preserveAspectRatio="none" style="position:absolute;left:616px;top:328px;width:8px;height:71px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><defs><marker id="dc-arrow-head-filled-2" orient="auto" markerWidth="5" markerHeight="5" refX="2" refY="2" overflow="visible"><path d="M0 0 L4 2 L0 4 Z" fill="#7A5A48" stroke="none" style="stroke: none; fill: #7A5A48; fill: context-stroke"/></marker></defs><path d="M 4 0 L 4 67" marker-end="url(#dc-arrow-head-filled-2)"></path></svg>
+<svg width="8" height="71" viewBox="0 0 8 71" preserveAspectRatio="none" style="position:absolute;left:986px;top:328px;width:8px;height:71px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><defs><marker id="dc-arrow-head-filled-3" orient="auto" markerWidth="5" markerHeight="5" refX="2" refY="2" overflow="visible"><path d="M0 0 L4 2 L0 4 Z" fill="#7A5A48" stroke="none" style="stroke: none; fill: #7A5A48; fill: context-stroke"/></marker></defs><path d="M 4 0 L 4 67" marker-end="url(#dc-arrow-head-filled-3)"></path></svg>
+<svg width="8" height="103" viewBox="0 0 8 103" preserveAspectRatio="none" style="position:absolute;left:246px;top:496px;width:8px;height:103px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><defs><marker id="dc-arrow-head-filled-4" orient="auto" markerWidth="5" markerHeight="5" refX="2" refY="2" overflow="visible"><path d="M0 0 L4 2 L0 4 Z" fill="#7A5A48" stroke="none" style="stroke: none; fill: #7A5A48; fill: context-stroke"/></marker></defs><path d="M 4 0 L 4 99" marker-end="url(#dc-arrow-head-filled-4)"></path></svg>
+<svg width="8" height="52" viewBox="0 0 8 52" preserveAspectRatio="none" style="position:absolute;left:616px;top:496px;width:8px;height:52px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M 4 0 L 4 52"></path></svg>
+<svg width="370" height="8" viewBox="0 0 370 8" preserveAspectRatio="none" style="position:absolute;left:620px;top:544px;width:370px;height:8px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M 0 4 L 370 4"></path></svg>
+<svg width="8" height="51" viewBox="0 0 8 51" preserveAspectRatio="none" style="position:absolute;left:616px;top:548px;width:8px;height:51px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><defs><marker id="dc-arrow-head-filled-5" orient="auto" markerWidth="5" markerHeight="5" refX="2" refY="2" overflow="visible"><path d="M0 0 L4 2 L0 4 Z" fill="#7A5A48" stroke="none" style="stroke: none; fill: #7A5A48; fill: context-stroke"/></marker></defs><path d="M 4 0 L 4 47" marker-end="url(#dc-arrow-head-filled-5)"></path></svg>
+<svg width="8" height="51" viewBox="0 0 8 51" preserveAspectRatio="none" style="position:absolute;left:986px;top:548px;width:8px;height:51px;overflow:visible;fill:none;stroke:#7A5A48;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><defs><marker id="dc-arrow-head-filled-6" orient="auto" markerWidth="5" markerHeight="5" refX="2" refY="2" overflow="visible"><path d="M0 0 L4 2 L0 4 Z" fill="#7A5A48" stroke="none" style="stroke: none; fill: #7A5A48; fill: context-stroke"/></marker></defs><path d="M 4 0 L 4 47" marker-end="url(#dc-arrow-head-filled-6)"></path></svg>
+<div style="position:absolute;left:64px;top:64px;font-size:32px;font-weight:700;line-height:40px">버거 · 시스템 구조도</div>
+<div style="position:absolute;left:64px;top:112px;font-size:18px;line-height:24px;color:#7A5A48">식당 구조에 세트 구성 엔진과 주문번호 안내 모니터를 더한 형태</div>
+<div style="position:absolute;left:470px;top:160px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#FDECEA;border:1px solid #B42318;border-radius:12px;font-size:18px;line-height:24px;color:#8F1D14"><span><b>키오스크 태블릿 앱</b><br>세트 · 라지 · 재료 변경 UI</span></div>
+<div style="position:absolute;left:100px;top:400px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#EEEDFE;border:1px solid #534AB7;border-radius:12px;font-size:18px;line-height:24px;color:#26215C"><span><b>카드 결제 단말</b><br>USB · 블루투스 · 건별 승인</span></div>
+<div style="position:absolute;left:470px;top:400px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#FDECEA;border:1px solid #B42318;border-radius:12px;font-size:18px;line-height:24px;color:#8F1D14"><span><b>클라우드 서버</b><br>주문 · 세트 구성 · 주문번호</span></div>
+<div style="position:absolute;left:840px;top:400px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#EEEDFE;border:1px solid #534AB7;border-radius:12px;font-size:18px;line-height:24px;color:#26215C"><span><b>주방 주문서 프린터</b><br>LAN · ESC/POS · 재료 변경 인쇄</span></div>
+<div style="position:absolute;left:100px;top:600px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#F1EFE8;border:1px solid #888780;border-radius:12px;font-size:18px;line-height:24px;color:#2C2C2A"><span><b>VAN사</b><br>카드 승인 중계</span></div>
+<div style="position:absolute;left:470px;top:600px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#FDECEA;border:1px solid #B42318;border-radius:12px;font-size:18px;line-height:24px;color:#8F1D14"><span><b>관리자 · 주방 화면</b><br>메뉴 · 세트가 · 품절 · 조리 상태</span></div>
+<div style="position:absolute;left:840px;top:600px;width:300px;height:96px;box-sizing:border-box;padding:8px 12px;display:flex;align-items:center;justify-content:center;text-align:center;background:#EEEDFE;border:1px solid #534AB7;border-radius:12px;font-size:18px;line-height:24px;color:#26215C"><span><b>주문번호 안내 모니터</b><br>조리 중 · 완료 번호 표시</span></div>
+<div style="position:absolute;left:64px;top:760px;display:flex;gap:28px;font-size:16px;line-height:24px;color:#3A2418"><span style="display:flex;align-items:center;gap:8px"><span style="width:16px;height:16px;border-radius:4px;background:#FDECEA;border:1px solid #B42318"></span>직접 개발 소프트웨어</span><span style="display:flex;align-items:center;gap:8px"><span style="width:16px;height:16px;border-radius:4px;background:#EEEDFE;border:1px solid #534AB7"></span>매장 하드웨어</span><span style="display:flex;align-items:center;gap:8px"><span style="width:16px;height:16px;border-radius:4px;background:#F1EFE8;border:1px solid #888780"></span>외부 사업자</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1240,"height":840}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

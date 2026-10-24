@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>사장님 쿠폰 관리 대시보드</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+body{margin:0}
+:root{--fs-h1:30px;--fs-h2:20px;--fs-body:16px;--fs-small:14px;--fs-kpi:32px;--pad:32px}
+@media (max-width:1199px){:root{--fs-h1:26px;--fs-h2:18px;--fs-body:15px;--fs-small:13px;--fs-kpi:28px;--pad:24px}}
+@media (max-width:767px){:root{--fs-h1:22px;--fs-h2:17px;--fs-body:14px;--fs-small:12px;--fs-kpi:24px;--pad:16px}}
+</style>
+</helmet>
+<div style="min-height:1100px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;font-size:var(--fs-body);display:flex;flex-wrap:wrap">
+
+<nav aria-label="사장님 메뉴" style="flex:1 1 220px;max-width:100%;box-sizing:border-box;background:#2A1A12;color:#FFFFFF;padding:24px 16px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px">
+<div style="flex:1 1 100%;display:flex;flex-direction:column;gap:2px;padding:0 8px 16px"><span style="font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;color:#F59E0B">[서비스명]</span><span style="font-size:var(--fs-small);color:#B9A28F">[가게 이름] 버거</span></div>
+<a href="#" style="flex:1 1 180px;height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;color:#B9A28F;text-decoration:none;display:flex;align-items:center">홈</a>
+<a href="#" style="flex:1 1 180px;height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;color:#B9A28F;text-decoration:none;display:flex;align-items:center">주문 · 매출</a>
+<a href="#" style="flex:1 1 180px;height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;color:#B9A28F;text-decoration:none;display:flex;align-items:center">메뉴 관리</a>
+<a href="coupon-dashboard.dc.html" aria-current="page" style="flex:1 1 180px;height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;background:#B42318;color:#FFFFFF;font-weight:700;text-decoration:none;display:flex;align-items:center">쿠폰</a>
+<a href="#" style="flex:1 1 180px;height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;color:#B9A28F;text-decoration:none;display:flex;align-items:center">기기 · 프린터</a>
+<a href="#" style="flex:1 1 180px;height:48px;box-sizing:border-box;padding:0 14px;border-radius:12px;color:#B9A28F;text-decoration:none;display:flex;align-items:center">설정</a>
+</nav>
+
+<main style="flex:999 1 560px;min-width:0;box-sizing:border-box;padding:var(--pad);display:flex;flex-direction:column;gap:24px">
+
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font-size:var(--fs-h1);font-weight:900">쿠폰 관리</span>
+<span style="font-size:var(--fs-small);color:#7A5A48">발행한 쿠폰은 키오스크에서 시리얼 번호 입력 · 바코드 스캔으로 바로 쓸 수 있어요 · 화면 숫자는 예시 데이터</span>
+</div>
+<a href="coupon-create.dc.html" style="height:52px;box-sizing:border-box;padding:0 24px;border-radius:14px;background:#B42318;color:#FFFFFF;font-weight:700;text-decoration:none;display:flex;align-items:center">+ 쿠폰 만들기</a>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:var(--fs-small);color:#7A5A48">진행 중 쿠폰</span><span style="font-family:'JetBrains Mono',monospace;font-size:var(--fs-kpi);font-weight:700">3개</span></div>
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:var(--fs-small);color:#7A5A48">이번 달 발행</span><span style="font-family:'JetBrains Mono',monospace;font-size:var(--fs-kpi);font-weight:700">820장</span></div>
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:var(--fs-small);color:#7A5A48">사용 · 사용률</span><span style="font-family:'JetBrains Mono',monospace;font-size:var(--fs-kpi);font-weight:700;color:#B42318">239장 · 29%</span></div>
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:var(--fs-small);color:#7A5A48">쿠폰 사용 주문 매출</span><span style="font-family:'JetBrains Mono',monospace;font-size:var(--fs-kpi);font-weight:700">4,780,000원</span></div>
+</div>
+
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px">
+<span style="font-size:var(--fs-h2);font-weight:700">발행한 쿠폰</span>
+<div style="display:flex;gap:8px"><span style="height:36px;padding:0 14px;border-radius:18px;background:#2A1A12;color:#FFFFFF;font-size:var(--fs-small);font-weight:700;display:flex;align-items:center">전체</span><span style="height:36px;padding:0 14px;border-radius:18px;border:1px solid #F0DCC8;box-sizing:border-box;font-size:var(--fs-small);display:flex;align-items:center">진행 중</span><span style="height:36px;padding:0 14px;border-radius:18px;border:1px solid #F0DCC8;box-sizing:border-box;font-size:var(--fs-small);display:flex;align-items:center">종료</span></div>
+</div>
+<div style="overflow-x:auto">
+<div style="min-width:820px;display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:2.2fr 1.6fr 1.4fr 1.3fr 1fr 0.8fr 0.8fr;gap:12px;padding:10px 12px;border-radius:10px;background:#FFF8F0;font-size:var(--fs-small);font-weight:700;color:#7A5A48">
+<span>쿠폰 이름</span><span>혜택</span><span>발행 방식</span><span>기간</span><span>발행 / 사용</span><span>상태</span><span>관리</span>
+</div>
+<sc-for list="{{coupons}}" as="c" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:2.2fr 1.6fr 1.4fr 1.3fr 1fr 0.8fr 0.8fr;gap:12px;align-items:center;padding:14px 12px;border-bottom:1px solid #F6E8DA">
+<span style="font-weight:700">{{c.name}}</span>
+<span>{{c.benefit}}</span>
+<span style="color:#7A5A48">{{c.method}}</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:var(--fs-small)">{{c.period}}</span>
+<span style="font-family:'JetBrains Mono',monospace">{{c.usage}}</span>
+<span style="justify-self:start;height:30px;padding:0 10px;border-radius:15px;background:{{c.stateBg}};color:{{c.stateInk}};font-size:var(--fs-small);font-weight:700;display:flex;align-items:center">{{c.state}}</span>
+<button style="justify-self:start;height:36px;padding:0 12px;border:1px solid #F0DCC8;border-radius:10px;background:#FFFFFF;font-family:inherit;font-size:var(--fs-small);color:#2A1A12">수정</button>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:16px">
+<div style="flex:2 1 420px;box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:var(--fs-h2);font-weight:700">오늘 사용 기록</span>
+<sc-for list="{{logs}}" as="g" hint-placeholder-count="4">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #F6E8DA">
+<span style="width:56px;font-family:'JetBrains Mono',monospace;color:#7A5A48">{{g.time}}</span>
+<span style="flex:1 1 180px;font-weight:700">{{g.name}}</span>
+<span style="height:28px;padding:0 10px;border-radius:14px;background:{{g.wayBg}};color:{{g.wayInk}};font-size:var(--fs-small);font-weight:700;display:flex;align-items:center">{{g.way}}</span>
+<span style="font-family:'JetBrains Mono',monospace;color:#7A5A48">{{g.order}}</span>
+<span style="width:96px;text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;color:#B42318">{{g.amount}}</span>
+</div>
+</sc-for>
+</div>
+<div style="flex:1 1 260px;box-sizing:border-box;background:#2A1A12;color:#FFFFFF;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:var(--fs-h2);font-weight:700">사용 방식</span>
+<div style="display:flex;justify-content:space-between"><span style="color:#B9A28F">바코드 · QR 스캔</span><span style="font-family:'JetBrains Mono',monospace;font-weight:700">72%</span></div>
+<div style="height:10px;border-radius:5px;background:#5C4536;overflow:hidden"><div style="width:72%;height:10px;background:#F59E0B"></div></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#B9A28F">시리얼 번호 입력</span><span style="font-family:'JetBrains Mono',monospace;font-weight:700">28%</span></div>
+<div style="height:10px;border-radius:5px;background:#5C4536;overflow:hidden"><div style="width:28%;height:10px;background:#FFFFFF"></div></div>
+<span style="margin-top:auto;font-size:var(--fs-small);line-height:22px;color:#B9A28F">같은 시리얼은 한 번만 쓸 수 있고, 기간이 지나면 자동으로 막혀요.</span>
+</div>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const on = { stateBg: '#FDECEA', stateInk: '#8F1D14' };
+    const end = { stateBg: '#F6E8DA', stateInk: '#7A5A48' };
+    const bc = { wayBg: '#FDECEA', wayInk: '#8F1D14' };
+    const sr = { wayBg: '#FEF3D7', wayInk: '#7A4A00' };
+    return {
+      coupons: [
+        { name: '세트 1,500원 할인', benefit: '세트 메뉴 1,500원', method: '시리얼 · 바코드', period: '10.01 ~ 11.30', usage: '400 / 132', state: '진행 중', ...on },
+        { name: '라지 업그레이드 무료', benefit: '세트 라지 변경', method: '영수증 하단 인쇄', period: '10.10 ~ 11.30', usage: '300 / 88', state: '진행 중', ...on },
+        { name: '감자튀김 무료 (단골)', benefit: '감자튀김 R 1개', method: '문자 발송', period: '10.20 ~ 11.20', usage: '120 / 19', state: '진행 중', ...on },
+        { name: '오픈 1주년 20% 할인', benefit: '전 메뉴 20%', method: '시리얼', period: '09.01 ~ 09.07', usage: '100 / 97', state: '종료', ...end }
+      ],
+      logs: [
+        { time: '12:44', name: '세트 1,500원 할인', way: '바코드', order: 'B-142', amount: '-1,500원', ...bc },
+        { time: '12:30', name: '라지 업그레이드 무료', way: '시리얼', order: 'B-139', amount: '-700원', ...sr },
+        { time: '12:12', name: '감자튀김 무료 (단골)', way: '바코드', order: 'B-131', amount: '-2,000원', ...bc },
+        { time: '11:58', name: '세트 1,500원 할인', way: '시리얼', order: 'B-127', amount: '-1,500원', ...sr }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

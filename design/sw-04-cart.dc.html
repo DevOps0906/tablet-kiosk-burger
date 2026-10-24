@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 소프트웨어형 주문 확인</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:1280px;height:800px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="height:80px;flex:none;box-sizing:border-box;padding:0 24px;background:#FFFFFF;border-bottom:1px solid #F0DCC8;display:flex;align-items:center;gap:16px">
+<a href="sw-01-menu.dc.html" style="height:52px;box-sizing:border-box;padding:0 20px;border:1px solid #F0DCC8;border-radius:26px;font-size:18px;color:#2A1A12;text-decoration:none;display:flex;align-items:center">‹ 메뉴로</a>
+<span style="font-size:30px;font-weight:900">주문 확인</span>
+<span style="height:38px;padding:0 14px;border-radius:12px;background:#2A1A12;color:#FFFFFF;font-size:19px;font-weight:700;display:flex;align-items:center">매장</span>
+<span style="flex:1"></span>
+<span style="font-size:17px;color:#7A5A48">[가게 이름] 수제버거</span>
+</div>
+
+<div style="flex:1;min-height:0;box-sizing:border-box;padding:24px;display:flex;gap:24px">
+
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px;color:#7A5A48">메뉴 3개</span><button style="height:44px;padding:0 16px;border:0;background:transparent;font-family:inherit;font-size:18px;color:#B42318">전체 삭제</button></div>
+<sc-for list="{{lines}}" as="l" hint-placeholder-count="3">
+<div style="height:128px;box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:0 20px;display:flex;align-items:center;gap:18px">
+<span style="width:88px;height:88px;flex:none;border-radius:16px;background:{{l.tint}}"></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px"><span style="font-size:22px;font-weight:900">{{l.name}}</span><span style="font-size:16px;color:#7A5A48">{{l.opt}}</span></div>
+<button style="height:48px;padding:0 16px;border:1px solid #F0DCC8;border-radius:24px;background:#FFFFFF;font-family:inherit;font-size:16px;color:#2A1A12">구성 변경</button>
+<div style="display:flex;align-items:center;gap:8px">
+<button aria-label="수량 줄이기" style="width:48px;height:48px;border:1px solid #F0DCC8;border-radius:12px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:22px;color:#2A1A12">−</button>
+<span style="min-width:28px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700">1</span>
+<button aria-label="수량 늘리기" style="width:48px;height:48px;border:1px solid #F0DCC8;border-radius:12px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:22px;color:#2A1A12">+</button>
+</div>
+<span style="width:110px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700">{{l.total}}원</span>
+</div>
+</sc-for>
+</div>
+
+<div style="width:360px;flex:none;box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:22px;font-weight:900">결제 예정</span>
+<div style="display:flex;justify-content:space-between;font-size:19px"><span style="color:#7A5A48">상품 금액</span><span style="font-family:'JetBrains Mono',monospace">22,800원</span></div>
+<div style="display:flex;justify-content:space-between;font-size:19px"><span style="color:#7A5A48">재료 추가</span><span style="font-family:'JetBrains Mono',monospace">포함</span></div>
+<div style="height:1px;background:#F0DCC8"></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:22px;font-weight:900">결제 금액</span><span style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:#B42318">22,800원</span></div>
+<div style="box-sizing:border-box;border-radius:14px;background:#FEF3D7;padding:14px 16px;font-size:17px;line-height:26px;color:#7A4A00">감자튀김 하나 더? 단품 2,300원</div>
+<div style="flex:1"></div>
+<button style="height:64px;border:2px solid #B42318;border-radius:16px;background:#FFFFFF;color:#B42318;font-family:inherit;font-size:21px;font-weight:700">더 담기</button>
+<a href="sw-05-pay.dc.html" style="height:72px;box-sizing:border-box;border-radius:18px;background:#B42318;color:#FFFFFF;font-size:23px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center">결제하기 ›</a>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      lines: [
+        { name: '더블 불고기 라지세트', opt: '양파 빼기 · 치즈 추가 · 감자튀김 L · 콜라 L', total: '10,900', tint: '#F3D9C2' },
+        { name: '치킨버거 세트', opt: '치즈스틱 변경 · 제로콜라 R', total: '8,900', tint: '#F6E2CF' },
+        { name: '너겟 6조각', opt: '칠리 소스', total: '3,000', tint: '#FBEBC4' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

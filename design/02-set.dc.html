@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>단품 세트 라지세트 선택</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:800px;height:1280px;box-sizing:border-box;background:#5A4A40;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="height:96px;flex:none"></div>
+
+<div style="flex:1;min-height:0;box-sizing:border-box;background:#FFF8F0;border-radius:32px 32px 0 0;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="flex:none;box-sizing:border-box;padding:28px 32px 20px;display:flex;align-items:center;gap:20px;border-bottom:1px solid #F0DCC8">
+<div style="width:120px;height:120px;flex:none;border-radius:24px;background:#F3D9C2;display:flex;align-items:center;justify-content:center;font-size:15px;color:#7A5A48">사진</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:32px;font-weight:900;line-height:42px">더블 불고기버거</span>
+<span style="font-size:18px;color:#7A5A48">불고기 패티 2장 · 양상추 · 양파 · 소스</span>
+</div>
+<button aria-label="닫기" style="width:56px;height:56px;border:1px solid #F0DCC8;border-radius:28px;background:#FFFFFF;font-family:inherit;font-size:26px;color:#2A1A12">×</button>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:28px 32px 16px">
+<span style="font-size:28px;font-weight:900">어떻게 드릴까요?</span>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:0 32px;display:flex;flex-direction:column;gap:16px">
+
+<button style="box-sizing:border-box;width:100%;height:148px;border:2px solid #F0DCC8;border-radius:22px;background:#FFFFFF;padding:0 28px;display:flex;align-items:center;gap:24px;text-align:left;font-family:inherit;color:#2A1A12">
+<div style="width:96px;height:96px;flex:none;border-radius:18px;background:#F6E8DA;display:flex;align-items:center;justify-content:center;font-size:15px;color:#7A5A48">버거</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:27px;font-weight:900">단품</span>
+<span style="font-size:18px;color:#7A5A48">버거만</span>
+</div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700">6,900원</span>
+</button>
+
+<button style="box-sizing:border-box;width:100%;height:148px;border:2px solid #F0DCC8;border-radius:22px;background:#FFFFFF;padding:0 28px;display:flex;align-items:center;gap:24px;text-align:left;font-family:inherit;color:#2A1A12">
+<div style="width:96px;height:96px;flex:none;border-radius:18px;background:#F6E8DA;display:flex;align-items:center;justify-content:center;font-size:15px;color:#7A5A48">세트</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:27px;font-weight:900">세트</span>
+<span style="font-size:18px;color:#7A5A48">버거 + 감자튀김 R + 콜라 R</span>
+</div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700">9,600원</span>
+</button>
+
+<button aria-pressed="true" style="position:relative;box-sizing:border-box;width:100%;height:148px;border:4px solid #B42318;border-radius:22px;background:#FDECEA;padding:0 28px;display:flex;align-items:center;gap:24px;text-align:left;font-family:inherit;color:#2A1A12">
+<div style="width:96px;height:96px;flex:none;border-radius:18px;background:#F8D4C8;display:flex;align-items:center;justify-content:center;font-size:15px;color:#7A2E1F">라지</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:27px;font-weight:900;color:#8F1D14">라지세트</span>
+<span style="font-size:18px;color:#7A2E1F">버거 + 감자튀김 L + 콜라 L</span>
+</div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:#8F1D14">10,300원</span>
+</button>
+
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:20px 32px 0">
+<div style="box-sizing:border-box;border-radius:16px;background:#FEF3D7;padding:16px 22px;font-size:20px;line-height:30px;color:#7A4A00">세트에서 <b>+700원</b>이면 감자튀김과 음료가 라지로 바뀌어요</div>
+</div>
+
+<div style="flex:1"></div>
+
+<div style="height:144px;flex:none;box-sizing:border-box;padding:0 32px;border-top:1px solid #F0DCC8;display:flex;align-items:center;gap:16px">
+<button style="flex:1;height:88px;border:2px solid #F0DCC8;border-radius:20px;background:#FFFFFF;color:#2A1A12;font-family:inherit;font-size:24px;font-weight:700">취소</button>
+<a href="03-custom.dc.html" style="flex:2;height:88px;box-sizing:border-box;border-radius:20px;background:#B42318;color:#FFFFFF;font-size:25px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center">사이드 · 음료 고르기 ›</a>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":1280}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

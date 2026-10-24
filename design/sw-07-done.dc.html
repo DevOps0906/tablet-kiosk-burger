@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 소프트웨어형 주문 완료</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:1280px;height:800px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;overflow:hidden">
+
+<div style="flex:1;box-sizing:border-box;background:#B42318;padding:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+<span style="font-size:34px;font-weight:900;color:#FFFFFF">주문 완료!</span>
+<span style="font-size:22px;color:#FDE7B0">매장 · 주문번호</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:160px;font-weight:700;line-height:168px;color:#FFFFFF">317</span>
+<span style="height:52px;padding:0 24px;border-radius:26px;background:#F59E0B;color:#2A1A12;font-size:22px;font-weight:900;display:flex;align-items:center">가게 TV에 317이 뜨면 받아 가세요</span>
+<div style="display:flex;gap:16px;margin-top:20px">
+<button style="width:220px;height:72px;border:2px solid #FFFFFF;border-radius:18px;background:transparent;color:#FFFFFF;font-family:inherit;font-size:21px;font-weight:700">영수증 출력</button>
+<a href="sw-00-start.dc.html" style="width:220px;height:72px;box-sizing:border-box;border-radius:18px;background:#FFFFFF;color:#B42318;font-size:21px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center">처음으로</a>
+</div>
+<span style="font-size:17px;color:#FDE7B0">20초 뒤 처음 화면으로 돌아가요</span>
+</div>
+
+<div style="width:440px;flex:none;box-sizing:border-box;background:#FFF8F0;padding:48px 40px;display:flex;flex-direction:column;align-items:center;gap:12px">
+<span style="font-size:17px;font-weight:700;color:#7A5A48">주방 주문서 출력 예시</span>
+<div style="box-sizing:border-box;width:360px;background:#FFFFFF;border:1px solid #E5D3C2;border-radius:4px;padding:20px 22px;display:flex;flex-direction:column;gap:8px;font-family:'JetBrains Mono','Noto Sans KR',monospace;font-size:18px;line-height:26px">
+<div style="display:flex;justify-content:space-between;align-items:center;font-weight:700"><span style="font-size:30px">#317</span><span style="box-sizing:border-box;border:3px solid #2A1A12;padding:2px 14px;font-size:30px;line-height:40px">매장</span></div>
+<div style="border-top:2px dashed #B9A28F"></div>
+<div style="display:flex;justify-content:space-between;font-weight:700"><span>더블불고기 라지세트</span><span>x1</span></div>
+<div style="font-size:16px;color:#5C4536;padding-left:10px">· 양파 빼기 · 치즈 추가<br>· 감자튀김 L · 콜라 L</div>
+<div style="display:flex;justify-content:space-between;font-weight:700"><span>치킨버거 세트</span><span>x1</span></div>
+<div style="font-size:16px;color:#5C4536;padding-left:10px">· 치즈스틱 · 제로콜라 R</div>
+<div style="display:flex;justify-content:space-between;font-weight:700"><span>너겟 6조각</span><span>x1</span></div>
+<div style="font-size:16px;color:#5C4536;padding-left:10px">· 칠리 소스</div>
+<div style="border-top:2px dashed #B9A28F"></div>
+<div style="display:flex;justify-content:space-between;font-size:15px;color:#5C4536"><span>더치페이 3건</span><span>12:31</span></div>
+</div>
+<div style="box-sizing:border-box;width:360px;border-radius:14px;background:#2A1A12;color:#FFFFFF;padding:14px 18px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:16px;color:#F0DCC8">가게 TV 안내</span><span style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700">조리 중 315 · 316 · <span style="color:#F59E0B">317</span></span></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

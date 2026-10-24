@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>버거 반응형 구간과 폰트 기준</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:1200px;height:720px;box-sizing:border-box;background:#FFFFFF;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;padding:40px 48px;display:flex;flex-direction:column;gap:22px;overflow:hidden">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:36px;font-weight:700;line-height:48px">버거 · 반응형 구간 · 폰트 기준</span>
+<span style="font-size:18px;color:#7A5A48">화면 설계는 태블릿 구간(세로 800×1280) 기준 · 왼쪽 카테고리 열과 주문번호 표시 행 추가</span>
+</div>
+
+<div style="display:flex;flex-direction:column;border:1px solid #F0DCC8;border-radius:16px;overflow:hidden">
+<div style="display:grid;grid-template-columns:200px repeat(3,minmax(0,1fr));height:52px;background:#2A1A12;color:#FFFFFF;font-size:18px;font-weight:700;align-items:center">
+<span style="padding:0 20px">항목</span>
+<span style="padding:0 20px">모바일 (~767)</span>
+<span style="padding:0 20px;background:#B42318;height:52px;display:flex;align-items:center">태블릿 (768~1199) 기준</span>
+<span style="padding:0 20px">데스크탑 (1200~)</span>
+</div>
+<sc-for list="{{rows}}" as="row" hint-placeholder-count="9">
+<div style="display:grid;grid-template-columns:200px repeat(3,minmax(0,1fr));min-height:42px;border-top:1px solid #F0DCC8;align-items:stretch;font-size:17px">
+<span style="padding:9px 20px;color:#7A5A48;font-weight:500;display:flex;align-items:center">{{row.label}}</span>
+<span style="padding:9px 20px;display:flex;align-items:center;font-family:{{row.font}}">{{row.c1}}</span>
+<span style="padding:9px 20px;display:flex;align-items:center;background:#FDECEA;font-weight:700;font-family:{{row.font}}">{{row.c2}}</span>
+<span style="padding:9px 20px;display:flex;align-items:center;font-family:{{row.font}}">{{row.c3}}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+<span style="font-size:17px;color:#7A5A48;margin-right:4px">색상</span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;height:28px;border-radius:8px;background:#B42318"></span><span style="font-family:'JetBrains Mono',monospace;font-size:15px">#B42318 버튼</span></span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;height:28px;border-radius:8px;background:#2A1A12"></span><span style="font-family:'JetBrains Mono',monospace;font-size:15px">#2A1A12 헤더</span></span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;height:28px;border-radius:8px;background:#F59E0B"></span><span style="font-family:'JetBrains Mono',monospace;font-size:15px">#F59E0B 강조 · 배지</span></span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;height:28px;border-radius:8px;background:#2563EB"></span><span style="font-family:'JetBrains Mono',monospace;font-size:15px">#2563EB 더치페이</span></span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;height:28px;border-radius:8px;background:#FFF8F0;border:1px solid #F0DCC8"></span><span style="font-family:'JetBrains Mono',monospace;font-size:15px">#FFF8F0 배경</span></span>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":720}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const t = "'Noto Sans KR',sans-serif";
+    const m = "'JetBrains Mono','Noto Sans KR',monospace";
+    return {
+      rows: [
+        { label: '주 용도', font: t, c1: 'QR 주문 · 픽업 알림', c2: '매장 키오스크 (세로)', c3: '대형 키오스크 · 관리자' },
+        { label: '카테고리', font: t, c1: '상단 가로 탭', c2: '왼쪽 세로 열 168px', c3: '왼쪽 세로 열 220px' },
+        { label: '메뉴 그리드', font: t, c1: '2열', c2: '3열', c3: '4열' },
+        { label: '제목', font: m, c1: '24px', c2: '30~34px', c3: '40px' },
+        { label: '본문', font: m, c1: '16px', c2: '20px', c3: '22px' },
+        { label: '메뉴명', font: m, c1: '16px', c2: '19px', c3: '22px' },
+        { label: '가격', font: m, c1: '18px', c2: '21~28px', c3: '28px' },
+        { label: '주문번호', font: m, c1: '72px', c2: '128px', c3: '160px' },
+        { label: '최소 터치 영역', font: m, c1: '48px', c2: '52~72px', c3: '72px' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

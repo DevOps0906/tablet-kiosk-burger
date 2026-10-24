@@ -1,0 +1,304 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-24T00:20:00Z"
+  },
+  "title": "버거 키오스크 디자인안",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "00-start.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 00 시작 화면 (매장/포장)"
+    },
+    "Main.dc.html": {
+      "x": 880,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 01 메뉴 선택"
+    },
+    "02-set.dc.html": {
+      "x": 1760,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 02 단품 · 세트 · 라지세트"
+    },
+    "03-custom.dc.html": {
+      "x": 2640,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 03 사이드 · 음료 · 재료 변경"
+    },
+    "04-cart.dc.html": {
+      "x": 3520,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 04 주문 확인"
+    },
+    "05-pay-method.dc.html": {
+      "x": 4400,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 05 결제 방법 선택 · 쿠폰"
+    },
+    "06-dutch.dc.html": {
+      "x": 5280,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 06 더치페이 (N등분)"
+    },
+    "07-done.dc.html": {
+      "x": 6160,
+      "y": 0,
+      "w": 800,
+      "h": 1280,
+      "title": "HW 07 주문 완료 · 주방 주문서"
+    },
+    "08-flow.dc.html": {
+      "x": 0,
+      "y": 1600,
+      "w": 1240,
+      "h": 1576,
+      "title": "08 결제 단계 플로우차트"
+    },
+    "09-structure.dc.html": {
+      "x": 1320,
+      "y": 1600,
+      "w": 1240,
+      "h": 840,
+      "title": "09 시스템 구조도"
+    },
+    "10-responsive.dc.html": {
+      "x": 2640,
+      "y": 1600,
+      "w": 1200,
+      "h": 720,
+      "title": "10 반응형 구간 · 폰트 기준"
+    },
+    "install-compare.dc.html": {
+      "x": 3920,
+      "y": 1600,
+      "w": 1240,
+      "h": 800,
+      "title": "설치 방식 비교 (HW vs SW)"
+    },
+    "set-01-start.dc.html": {
+      "x": 0,
+      "y": 3600,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 세팅 1 사장님 시작"
+    },
+    "set-02-store.dc.html": {
+      "x": 1360,
+      "y": 3600,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 세팅 2 매장 정보"
+    },
+    "set-03-menu.dc.html": {
+      "x": 2720,
+      "y": 3600,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 세팅 3 메뉴 · 세트 등록"
+    },
+    "set-04-devices.dc.html": {
+      "x": 4080,
+      "y": 3600,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 세팅 4 결제 단말 · 프린터 연결"
+    },
+    "set-05-kiosk.dc.html": {
+      "x": 5440,
+      "y": 3600,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 세팅 5 키오스크 모드 · 주문번호 안내"
+    },
+    "sw-00-start.dc.html": {
+      "x": 0,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 00 시작 화면 (매장/포장)"
+    },
+    "sw-01-menu.dc.html": {
+      "x": 1360,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 01 메뉴 선택"
+    },
+    "sw-02-set.dc.html": {
+      "x": 2720,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 02 단품 · 세트 · 라지세트"
+    },
+    "sw-03-custom.dc.html": {
+      "x": 4080,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 03 사이드 · 음료 · 재료 변경"
+    },
+    "sw-04-cart.dc.html": {
+      "x": 5440,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 04 주문 확인"
+    },
+    "sw-05-pay.dc.html": {
+      "x": 6800,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 05 결제 방법 선택 · 쿠폰"
+    },
+    "sw-06-dutch.dc.html": {
+      "x": 8160,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 06 더치페이 (N등분)"
+    },
+    "sw-07-done.dc.html": {
+      "x": 9520,
+      "y": 4800,
+      "w": 1280,
+      "h": 800,
+      "title": "SW 07 주문 완료 · 주방 주문서"
+    },
+    "coupon-dashboard.dc.html": {
+      "x": 0,
+      "y": 6200,
+      "w": 1440,
+      "h": 1100,
+      "expand": "fill",
+      "title": "쿠폰 1 사장님 쿠폰 관리 대시보드 (반응형)"
+    },
+    "coupon-create.dc.html": {
+      "x": 1520,
+      "y": 6200,
+      "w": 1440,
+      "h": 1100,
+      "expand": "fill",
+      "title": "쿠폰 2 사장님 쿠폰 발행 (반응형)"
+    },
+    "hw-coupon-serial.dc.html": {
+      "x": 3040,
+      "y": 6200,
+      "w": 800,
+      "h": 1280,
+      "title": "쿠폰 3 손님 · 스탠드형 시리얼 입력"
+    },
+    "hw-coupon-scan.dc.html": {
+      "x": 3920,
+      "y": 6200,
+      "w": 800,
+      "h": 1280,
+      "title": "쿠폰 4 손님 · 스탠드형 바코드 스캔"
+    },
+    "sw-coupon-serial.dc.html": {
+      "x": 4800,
+      "y": 6200,
+      "w": 1280,
+      "h": 800,
+      "title": "쿠폰 5 손님 · 갤럭시탭 시리얼 입력"
+    },
+    "sw-coupon-scan.dc.html": {
+      "x": 6160,
+      "y": 6200,
+      "w": 1280,
+      "h": 800,
+      "title": "쿠폰 6 손님 · 갤럭시탭 바코드 스캔"
+    }
+  },
+  "order": [
+    "00-start.dc.html",
+    "Main.dc.html",
+    "02-set.dc.html",
+    "03-custom.dc.html",
+    "04-cart.dc.html",
+    "05-pay-method.dc.html",
+    "06-dutch.dc.html",
+    "07-done.dc.html",
+    "08-flow.dc.html",
+    "09-structure.dc.html",
+    "10-responsive.dc.html",
+    "install-compare.dc.html",
+    "set-01-start.dc.html",
+    "set-02-store.dc.html",
+    "set-03-menu.dc.html",
+    "set-04-devices.dc.html",
+    "set-05-kiosk.dc.html",
+    "sw-00-start.dc.html",
+    "sw-01-menu.dc.html",
+    "sw-02-set.dc.html",
+    "sw-03-custom.dc.html",
+    "sw-04-cart.dc.html",
+    "sw-05-pay.dc.html",
+    "sw-06-dutch.dc.html",
+    "sw-07-done.dc.html",
+    "coupon-dashboard.dc.html",
+    "coupon-create.dc.html",
+    "hw-coupon-serial.dc.html",
+    "hw-coupon-scan.dc.html",
+    "sw-coupon-serial.dc.html",
+    "sw-coupon-scan.dc.html"
+  ],
+  "notes": {
+    "flowTitle": {
+      "x": 0,
+      "y": -260,
+      "text": "버거 키오스크 · 하드웨어 설치형 (세로 스탠드 800×1280)",
+      "kind": "title1",
+      "maxW": 6960
+    },
+    "docTitle": {
+      "x": 0,
+      "y": 1360,
+      "text": "결제 플로우차트 · 시스템 구조도 · 반응형 기준 · 설치 방식 비교",
+      "kind": "title1",
+      "maxW": 5160
+    },
+    "swTitle": {
+      "x": 0,
+      "y": 3320,
+      "text": "소프트웨어 설치형 ① 사장님 세팅 · 갤럭시탭 가로 1280×800",
+      "kind": "title1",
+      "maxW": 6720
+    },
+    "swScreenTitle": {
+      "x": 0,
+      "y": 4520,
+      "text": "소프트웨어 설치형 ② 손님 화면 · 스탠드형과 같은 8장",
+      "kind": "title1",
+      "maxW": 10800
+    },
+    "couponTitle": {
+      "x": 0,
+      "y": 5920,
+      "text": "쿠폰 · 사장님 발행 대시보드 + 손님 시리얼 입력 · 바코드 스캔",
+      "kind": "title1",
+      "maxW": 7440
+    }
+  },
+  "designSystems": []
+}

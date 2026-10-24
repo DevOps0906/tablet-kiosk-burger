@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>사이드 음료 재료 변경</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width:800px;height:1280px;box-sizing:border-box;background:#FFF8F0;color:#2A1A12;font-family:'Noto Sans KR',sans-serif;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="height:96px;flex:none;box-sizing:border-box;padding:0 32px;background:#FFFFFF;border-bottom:1px solid #F0DCC8;display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:20px">
+<button aria-label="세트 선택으로 돌아가기" style="height:56px;padding:0 22px;border:1px solid #F0DCC8;border-radius:28px;background:#FFFFFF;font-family:inherit;font-size:20px;font-weight:500;color:#2A1A12">‹ 이전</button>
+<span style="font-size:30px;font-weight:900">라지세트 구성</span>
+</div>
+<span style="font-size:18px;color:#7A5A48">더블 불고기버거</span>
+</div>
+
+<div style="flex:none;box-sizing:border-box;padding:18px 32px 0;display:flex;gap:8px">
+<span style="flex:1;height:44px;border-radius:22px;background:#2A1A12;color:#FFFFFF;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center">1 세트</span>
+<span style="flex:1;height:44px;border-radius:22px;background:#B42318;color:#FFFFFF;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center">2 사이드</span>
+<span style="flex:1;height:44px;border-radius:22px;background:#B42318;color:#FFFFFF;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center">3 음료</span>
+<span style="flex:1;height:44px;border-radius:22px;background:#B42318;color:#FFFFFF;font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center">4 재료</span>
+</div>
+
+<div style="flex:1;min-height:0;box-sizing:border-box;padding:20px 32px 0;display:flex;flex-direction:column;gap:20px;overflow:hidden">
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font-size:22px;font-weight:900">사이드</span>
+<div style="display:flex;gap:12px">
+<button aria-pressed="true" style="flex:1;height:120px;box-sizing:border-box;border:3px solid #B42318;border-radius:18px;background:#FDECEA;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:20px;font-weight:700">감자튀김 L</span><span style="font-size:16px;color:#8F1D14">기본</span></button>
+<button style="flex:1;height:120px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:18px;background:#FFFFFF;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:20px;font-weight:700">치즈스틱</span><span style="font-size:16px;color:#7A5A48">+700원</span></button>
+<button style="flex:1;height:120px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:18px;background:#FFFFFF;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:20px;font-weight:700">어니언링</span><span style="font-size:16px;color:#7A5A48">+700원</span></button>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font-size:22px;font-weight:900">음료</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
+<button aria-pressed="true" style="height:104px;box-sizing:border-box;border:3px solid #B42318;border-radius:18px;background:#FDECEA;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:19px;font-weight:700">콜라 L</span><span style="font-size:15px;color:#8F1D14">기본</span></button>
+<button style="height:104px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:18px;background:#FFFFFF;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:19px;font-weight:700">제로콜라 L</span><span style="font-size:15px;color:#7A5A48">+0원</span></button>
+<button style="height:104px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:18px;background:#FFFFFF;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:19px;font-weight:700">사이다 L</span><span style="font-size:15px;color:#7A5A48">+0원</span></button>
+<button style="height:104px;box-sizing:border-box;border:2px solid #F0DCC8;border-radius:18px;background:#FFFFFF;font-family:inherit;color:#2A1A12;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:19px;font-weight:700">아이스티 L</span><span style="font-size:15px;color:#7A5A48">+300원</span></button>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font-size:22px;font-weight:900">재료 빼기 · 추가</span>
+<div style="box-sizing:border-box;background:#FFFFFF;border:1px solid #F0DCC8;border-radius:18px;padding:4px 20px;display:flex;flex-direction:column">
+<sc-for list="{{toppings}}" as="t" hint-placeholder-count="5">
+<div style="min-height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:{{t.line}}">
+<div style="display:flex;flex-direction:column;gap:2px">
+<span style="font-size:20px;font-weight:700">{{t.name}}</span>
+<span style="font-size:15px;color:#7A5A48">{{t.note}}</span>
+</div>
+<div style="display:flex;gap:8px">
+<button aria-pressed="{{t.offOn}}" style="height:52px;min-width:84px;padding:0 14px;box-sizing:border-box;border:{{t.offBorder}};border-radius:14px;background:{{t.offBg}};color:{{t.offInk}};font-family:inherit;font-size:18px;font-weight:700">{{t.offLabel}}</button>
+<button aria-pressed="{{t.addOn}}" style="height:52px;min-width:84px;padding:0 14px;box-sizing:border-box;border:{{t.addBorder}};border-radius:14px;background:{{t.addBg}};color:{{t.addInk}};font-family:inherit;font-size:18px;font-weight:700">{{t.addLabel}}</button>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+</div>
+
+<div style="height:144px;flex:none;box-sizing:border-box;padding:0 32px;background:#FFFFFF;border-top:1px solid #F0DCC8;display:flex;align-items:center;gap:20px">
+<div style="display:flex;align-items:center;gap:12px">
+<button aria-label="수량 줄이기" style="width:56px;height:56px;border:1px solid #F0DCC8;border-radius:12px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:26px;color:#2A1A12">−</button>
+<span style="min-width:36px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700">1</span>
+<button aria-label="수량 늘리기" style="width:56px;height:56px;border:1px solid #F0DCC8;border-radius:12px;background:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:26px;color:#2A1A12">+</button>
+</div>
+<button style="flex:1;height:88px;border:0;border-radius:20px;background:#B42318;color:#FFFFFF;font-family:inherit;font-size:26px;font-weight:700">10,900원 담기</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":1280}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const on = { border: '0', bg: '#B42318', ink: '#FFFFFF' };
+    const off = { border: '1px solid #F0DCC8', bg: '#FFFFFF', ink: '#2A1A12' };
+    const src = [
+      { name: '양파', note: '기본 포함', offLabel: '빼기', addLabel: '많이', off: true, add: false },
+      { name: '피클', note: '기본 포함', offLabel: '빼기', addLabel: '많이', off: false, add: false },
+      { name: '치즈', note: '추가 +600원', offLabel: '없음', addLabel: '추가', off: false, add: true },
+      { name: '패티', note: '추가 +2,000원', offLabel: '기본', addLabel: '추가', off: false, add: false },
+      { name: '베이컨', note: '추가 +1,000원', offLabel: '없음', addLabel: '추가', off: false, add: false }
+    ];
+    return {
+      toppings: src.map((s, i) => {
+        const a = s.off ? on : off;
+        const b = s.add ? on : off;
+        return {
+          ...s,
+          line: i === src.length - 1 ? '0' : '1px solid #F6E8DA',
+          offOn: s.off, addOn: s.add,
+          offBorder: a.border, offBg: a.bg, offInk: a.ink,
+          addBorder: b.border, addBg: b.bg, addInk: b.ink
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
